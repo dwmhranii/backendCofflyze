@@ -1,4 +1,3 @@
-// database.js
 import mysql from 'mysql2';
 import dotenv from 'dotenv';
 
@@ -14,7 +13,6 @@ const pool = mysql.createPool({
     queueLimit: 0
 });
 
-// Menggunakan .promise() agar bisa menggunakan async/await
 const db = pool.promise();
 
 db.getConnection((err) => {
